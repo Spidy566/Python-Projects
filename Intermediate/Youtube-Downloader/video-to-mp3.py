@@ -1,6 +1,6 @@
 import os
-
 from pytube import YouTube
+
 
 def url_to_mp3(url):
     yt = YouTube(url)
@@ -11,7 +11,8 @@ def url_to_mp3(url):
     os.rename(out_file, new_file)
     return new_file
 
+
 if __name__ == "__main__":
-    url = input("Enter the Youtube URL: ")
-    url_to_mp3(url)
+    link = input("Enter the Youtube URL: ")
+    url_to_mp3(link)
     print("Audio Downloaded Successfully")

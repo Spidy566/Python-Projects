@@ -7,22 +7,25 @@ random.shuffle(key)
 
 
 def encrypt(message):
-    encrypted = ""
+    encode = ""
     for char in message:
-        encrypted += key[chars.index(char)]
-    return encrypted
+        encode += key[chars.index(char)]
+    return encode
 
 
 def decrypt(message):
-    decrypted = ""
+    decode = ""
     for char in message:
-        decrypted += chars[key.index(char)]
-    return decrypted
+        decode += chars[key.index(char)]
+    return decode
 
 
-message = input("Enter a message: ")
-encrypted = encrypt(message)
+text = input("Enter a message: ")
+encrypted = encrypt(text)
 decrypted = decrypt(encrypted)
 print("Encrypted:", encrypted)
 cipher = input("Enter the cipher: ")
-print("Decrypted:", decrypted)
+if cipher == encrypted:
+    print("Decrypted:", decrypted)
+else:
+    print("Invalid cipher")

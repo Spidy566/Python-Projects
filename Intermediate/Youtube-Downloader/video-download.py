@@ -1,6 +1,6 @@
-import pytube
 import os
 from pytube import YouTube
+
 
 def video_download(url):
     yt = YouTube(url)
@@ -11,7 +11,8 @@ def video_download(url):
     os.rename(out_file, new_file)
     return new_file
 
+
 if __name__ == "__main__":
-    url = input("Enter the Youtube URL: ")
-    video_download(url)
+    link = input("Enter the Youtube URL: ")
+    video_download(link)
     print("Video Downloaded Successfully")
